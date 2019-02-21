@@ -1,0 +1,69 @@
+#
+#               E L O   O F   P L A Y E R S
+# Plugin for easily report ugly players and +rep god players
+#
+# Prefix is before message, when you dont want it type prefix: ''
+# You can use colorful (+ bold, etc...) text with &
+
+prefix: '&4&l[&6Players ELO&4&l] &c'
+
+# You can set languages, default is english
+# It's include three languages (Czech, English, Germany)
+# Type only shorcut of country (Like: Czech: CS, English: EN, Germany: DE)
+
+language: EN
+
+# Write number (in seconds), when you want to users can
+# send +rep for 2 times per day set it for 43400
+# 1xDAY = 86400 | 2xDAY = 43400 | 4xDAY = 21700
+# 1xHOUR = 3600 | 2xHOUR = 1800 | 4xHOUR = 900
+# When you want to users can vote always type 1
+
+timeToVote: 3600
+
+# Set value when someone kill other player. I recommended type
+# both same. You can use it or not
+
+killEvent:
+    use: true
+    killer: 5
+    killed: 5
+    
+#
+#
+
+killMobEvent:
+    use: true
+    addPoints: 1
+    
+# Set value for hour rewarding
+
+hourReward:
+    use: true
+    default: 5
+    vip: 10
+    
+# Value for use change nicks
+
+changeNicks:
+    use: true
+    value: '&4&l[&6%PTS%&4&l]&f'
+    format: '%PREFIX% %ELO% %NICK% %SUFFIX%&c: &7%MSG%'
+    
+checkVulgarism:
+    use: true
+    replaceMessages: true
+    deleteMessages: false
+    toMinus: 10
+    censured: '*****'
+
+# Set there integer, so dont use ''
+# Name permission is name of group for example, group default has permission: pelo.default
+
+Permissions:
+    default:
+        plus: 5
+        minus: 5
+    vip:
+        plus: 10
+        minus: 10

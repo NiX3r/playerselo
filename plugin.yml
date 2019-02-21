@@ -1,0 +1,9 @@
+name: PlayersELO
+description: It's for ELO of players!
+author: NiX3r
+website: https://www.facebook.com/NiX3rNiX3r
+main: cz.nixii.playerselo.Main
+version: 1.3.0
+commands:
+  pelo:
+    description: Command /pelo
